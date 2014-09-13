@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE7C128F-048B-44AE-9106-71BB9B182F92}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>timw255.Sitefinity</RootNamespace>
+    <AssemblyName>timw255.Sitefinity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\Sitefinity 7.0\Projects\Experiments\packages\Microsoft.IdentityModel.6.1.7600.16394\lib\net35\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2014.1.403.2, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Quantum\bin\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity">
+      <HintPath>..\Quantum\bin\Telerik.Sitefinity.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Model">
+      <HintPath>..\Quantum\bin\Telerik.Sitefinity.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2014.1.403.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\Sitefinity 7.0\Projects\Experiments\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SuperForms\FormControls\Designers\CustomFormsControlDesigner.cs" />
+    <Compile Include="SuperForms\FormFields\IProgressiveFormControl.cs" />
+    <Compile Include="SuperForms\CriteriaItem.cs" />
+    <Compile Include="SuperForms\ConditionalRule.cs" />
+    <Compile Include="SuperForms\CriteriaOption.cs" />
+    <Compile Include="SuperForms\FormFields\Designers\CustomDropDownListDesigner.cs" />
+    <Compile Include="SuperForms\FormFields\Designers\CustomCheckboxesDesigner.cs" />
+    <Compile Include="SuperForms\FormFields\Designers\CustomMultipleChoiceDesigner.cs" />
+    <Compile Include="SuperForms\FormFields\Designers\CustomParagraphTextBoxDesigner.cs" />
+    <Compile Include="SuperForms\FormFields\Designers\Views\ProgressiveProfilingView.cs" />
+    <Compile Include="SuperForms\Localization\LogicalFormsResources.cs" />
+    <Compile Include="SuperForms\FormFields\LogicalFormCheckboxes.cs" />
+    <Compile Include="SuperForms\FormFields\LogicalFormDropDownList.cs" />
+    <Compile Include="SuperForms\FormFields\LogicalFormMultipleChoice.cs" />
+    <Compile Include="SuperForms\FormFields\LogicalFormParagraphTextBox.cs" />
+    <Compile Include="SuperForms\FormControls\LogicalFormsControl.cs" />
+    <Compile Include="SuperForms\FormFields\LogicalFormTextBox.cs" />
+    <Compile Include="SuperForms\FormFields\Designers\CustomTextBoxDesigner.cs" />
+    <Compile Include="SuperForms\FormFields\Designers\Views\ConditionalLogicView.cs" />
+    <Compile Include="SuperForms\FormFields\IConditionalFormControl.cs" />
+    <Compile Include="SuperForms\SimpleChoiceItem.cs" />
+    <Compile Include="SuperForms\Helpers.cs" />
+    <Compile Include="Installer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormTextBox.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SuperForms\FormFields\Designers\Views\ConditionalLogicView.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperForms\FormFields\Designers\Views\ConditionalLogicView.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormCheckboxes.js" />
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormDropDownList.js" />
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormMultipleChoice.js" />
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormParagraphTextBox.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\logicalForms.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SuperForms\FormFields\Designers\Views\ProgressiveProfilingView.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SuperForms\FormFields\Designers\Views\ProgressiveProfilingView.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Resources\logicalForms.min.js.map">
+      <DependentUpon>logicalForms.js</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormCheckboxes.min.js.map">
+      <DependentUpon>LogicalFormCheckboxes.js</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormDropDownList.min.js.map">
+      <DependentUpon>LogicalFormDropDownList.js</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormMultipleChoice.min.js.map">
+      <DependentUpon>LogicalFormMultipleChoice.js</DependentUpon>
+    </EmbeddedResource>
+    <None Include="SuperForms\FormFields\LogicalFormParagraphTextBox.min.js.map">
+      <DependentUpon>LogicalFormParagraphTextBox.js</DependentUpon>
+    </None>
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormTextBox.min.js.map">
+      <DependentUpon>LogicalFormTextBox.js</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SuperForms\FormControls\Designers\CustomFormsControlDesigner.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SuperForms\FormControls\Designers\CustomFormsControlDesigner.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormCheckboxes.min.js">
+      <DependentUpon>LogicalFormCheckboxes.js</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormDropDownList.min.js">
+      <DependentUpon>LogicalFormDropDownList.js</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormMultipleChoice.min.js">
+      <DependentUpon>LogicalFormMultipleChoice.js</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormParagraphTextBox.min.js">
+      <DependentUpon>LogicalFormParagraphTextBox.js</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperForms\FormFields\LogicalFormTextBox.min.js">
+      <DependentUpon>LogicalFormTextBox.js</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
